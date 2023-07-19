@@ -20,9 +20,9 @@ resources:
         include: master
         exclude: test
 pipelines:
-  - name: PS_SYNC_10509_001
+  - name: new_pipeline
     steps:
-      - name: PS_SYNC_10509_001
+      - name: step_1
         type: Bash
         configuration:
           inputResources:
