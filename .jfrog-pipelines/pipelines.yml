@@ -30,4 +30,4 @@ pipelines:
         execution:
           onExecute:
             - echo "test"
-            - update_run_description "Triggered on event_type: $res_pipeline_trigger_event_type of artifact_path: $res_pipeline_trigger_event_path"
+            - update_run_description "Triggered on event_type $res_pipeline_trigger_event_type of artifact_path $res_pipeline_trigger_event_path"
