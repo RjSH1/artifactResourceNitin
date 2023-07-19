@@ -1,0 +1,32 @@
+resources:
+  - name: pipeline_trigger_105091
+    type: Artifact
+    configuration:
+      jfrogPlatformProvider: integrationToken
+      repositories:
+        - test-example-repo-local
+      artifactPath:
+        include:
+          - tools/*
+        exclude:
+          - exclude/*
+      buildOn:
+        deployed: true
+        cached: true
+        deleted: true
+        copied: true
+        moved: true
+      branches:
+        include: master
+        exclude: test
+pipelines:
+  - name: PS_SYNC_10509_001
+    steps:
+      - name: PS_SYNC_10509_001
+        type: Bash
+        configuration:
+          inputResources:
+            - name: pipeline_trigger_105091
+        execution:
+          onExecute:
+            - echo "test"
