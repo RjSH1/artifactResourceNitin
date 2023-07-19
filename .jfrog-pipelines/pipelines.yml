@@ -2,7 +2,7 @@ resources:
   - name: pipeline_trigger
     type: Artifact
     configuration:
-      jfrogPlatformProvider: newTokenIntegration
+      jfrogPlatformProvider: newAdminTokenIntegration
       repositories:
         - test-example-repo-local
       artifactPath:
