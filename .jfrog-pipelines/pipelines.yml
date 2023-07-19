@@ -20,7 +20,7 @@ resources:
         include: master
         exclude: test
 pipelines:
-  - name: new_pipeline
+  - name: new_artifact_pipeline
     steps:
       - name: step_1
         type: Bash
