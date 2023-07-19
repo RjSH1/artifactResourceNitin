@@ -2,7 +2,7 @@ resources:
   - name: pipeline_trigger_105091
     type: Artifact
     configuration:
-      jfrogPlatformProvider: integrationToken
+      jfrogPlatformProvider: tokenIntegration
       repositories:
         - test-example-repo-local
       artifactPath:
