@@ -1,21 +1,21 @@
 resources:
   - name: pipeline_trigger
     type: Artifact
-    configuration:
-      jfrogPlatformProvider: newAdminTokenIntegration
-      repositories:
-        - samples-example-repo-local
-      artifactPath:
-        include:
-          - tools/*
-        exclude:
-          - exclude/*
-      buildOn:
-        deployed: true
-        cached: true
-        deleted: true
-        copied: true
-        moved: true
+    configuration:                                       # required
+      jfrogPlatformProvider: newAdminTokenIntegration    
+      repositories:                                      # required
+        - samples-example-repo-local                     
+      #artifactPath:                                      # optional
+        #include:
+          #- tools/*
+        #exclude:
+          #- exclude/*
+      #buildOn:
+        #deployed: true
+        #cached: true
+        #deleted: true
+        #copied: true
+        #moved: true
       branches:
         include: master
         exclude: test
